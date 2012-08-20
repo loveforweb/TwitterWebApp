@@ -1,0 +1,40 @@
+body { font-family:arial; font-size:11px; }
+
+
+#column_left, #column_right { width:340px; float:left; }
+#column_left { margin-right:18px; }
+#column_right { margin-top:40px;}
+#wrapper_trends, #wrapper_tweets { display:none; float:left; padding:18px;  background:#f0f0f0; border:1px solid #ccc; border-radius:5px; }
+
+
+#wrapper_page { width:960px; margin:30px auto; }
+
+#wrapper_select { margin-bottom:12px; width:350px; }
+#wrapper_select.loading { background:url(../images/loading.gif) center center no-repeat; }
+#wrapper_select label { margin-top:3px; width:137px; float:left; }
+#wrapper_select #selectState { display:none; width:200px; float:left; margin-bottom:0; }
+
+ul { margin:0; padding:0; }
+
+ul#trends_list {  list-style:none; }
+ul#trends_list li {  padding:9px 3px; float: left; border-bottom:1px solid #E4E4E4;}
+ul#trends_list li span { width: 180px; display: block; float: left; margin-right:9px; word-wrap:break-word;}
+ul#trends_list li button { float:left; }
+ul#trends_list li:nth-child(10) { border-bottom:none;}
+
+ul#tweet_list { list-style:none; margin:0; }
+ul#tweet_list li { padding:9px 3px; float:left; border-bottom:1px solid #E4E4E4; }
+ul#tweet_list li:nth-child(5) { border-bottom:none; }
+
+ul#tweet_list li .user_image { background:url(../images/loading.gif) center center no-repeat; float:left; margin-right:9px; height:48px; width:48px; }
+ul#tweet_list li .user_name { float:left; font-weight:bold; margin-bottom:3px;  width:230px; }
+ul#tweet_list li .user_tweet { float:left; width:230px;  }
+
+#LocationsError,
+#TrendsError,
+#TweetsError { display:none; }
+
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: ""; clear: both; height: 0; };
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
