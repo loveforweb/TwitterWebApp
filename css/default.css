@@ -1,15 +1,16 @@
 body { font-family:arial; font-size:11px; }
 
+#wrapper_page { width:700px; margin:30px auto; }
+#wrapper_logo { width:250px; height:33px; margin:21px auto;}
+#wrapper_logo a { border:none; }
+h1 { color: #4F5050; font-size: 30px; font-weight: bold; text-align:center; margin: 45px 0 21px; padding-bottom: 6px;}
 
 #column_left, #column_right { width:340px; float:left; }
 #column_left { margin-right:18px; }
 #column_right { margin-top:40px;}
 #wrapper_trends, #wrapper_tweets { display:none; float:left; padding:18px;  background:#f0f0f0; border:1px solid #ccc; border-radius:5px; }
 
-
-#wrapper_page { width:960px; margin:30px auto; }
-
-#wrapper_select { margin-bottom:12px; width:350px; }
+#wrapper_select { margin-bottom:12px; width:350px;}
 #wrapper_select.loading { background:url(../images/loading.gif) center center no-repeat; }
 #wrapper_select label { margin-top:3px; width:137px; float:left; }
 #wrapper_select #selectState { display:none; width:200px; float:left; margin-bottom:0; }

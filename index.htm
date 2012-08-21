@@ -2,12 +2,15 @@
 <html>
 	<head>
 		<title></title>		
-		<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" type="text/css" href="css/default.css" media="screen" />
-		
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" media="screen" />		
 	</head>
 	<body>
 		<div id="wrapper_page">	
+			<div id="wrapper_logo">
+				<a href="http://www.loveforweb.com" title="home"><img src="http://www.loveforweb.com/wp-content/themes/lfwCustom/images/loveforweb_logo.png"></a>
+			</div>
+			<h1>Twitter Web App</h1>
 			<div id="column_left" class="clearfix">
 				<div id="wrapper_select" class="clearfix loading">
 					<label>Select Location</label>
@@ -37,53 +40,7 @@
 				</div>
 			</div>			
 		</div>
-		<!--
-
-		i decided to create a twitter app using jquery to develop my javascript app developing skills. The app is based on trends and its post. the user can select a location from the drop down list which will then display the top 10 trends. From here the user can choose to read tweets from that trend. the tweet list will show latest tweets, including the tweeters user name and  profile image.
-
-		To break it all down, i will go through how the app was created. 
-
-		General.
-		All of the components use twitter api to get the relevant data. The layout is pretty simple and broken down into there own functions, if you know of any better way to build the app, please let me know, all advise and knowledge would be great - im here to learn!
-
-		All api calls are base on jquery ajax calls and use the success and error callbacks and also the context object to kick off any effects. 
-
-		Locations
-		the locations are base on Yahoo! WOEID system, which can be retrieved via the twitter location api. The locations are limited to twitters trend locations and all have a unique ids. Once the locations are pulled using $.map(), it is then sorted alphabetically and then appended to the select list. Orginally, i used the for function to loop through the JSON, but then @mkellett recommended I used $.map which was so much easier and cleaner.
-
-		The option uses, the WOEID code, country name and the country code, country code is used because there are cities which have the same name, such as Birminghham, one is in US and the other in UK.
-
-		once the select list was populated, users can select a location and get a list of the latest trends for that location.
-
 		
-		Trends
-		The trends displayed are based on the users selection, an api call is made with the url containing the WOEID from the select option value
-
-		CODE
-		url: 'http://api.twitter.com/1/trends/'+selectedOption+'.json?callback=?',
-
-		Once the details have been retrieved from twitter, the trends are displayed, showing the trned name and also a button which a use can click to read the tweets of that trend.
-
-
-		Tweets
-		The tweets are retrieved by getting the query value from the Read Tweets buttons. This is combined with another api url and the call is made once the user click s tyhe button
-
-		CODE
-		url: 'http://search.twitter.com/search.json?q='+trendQuery+'&rpp=5&result_type=recent&callback=?_',
-
-		the results are of the top 5 latest tweets.
-
-		Once all the above was completed, i added a bit of wizz to make it look a bit pretty, so, i used the .done() function which would kick off any animations once the data was loaded:
-		The Locations select will show once the list was populated and the loader will dissappear
-		The Trends would fade in once populated,if the country was changed, then the trends would fade out and fade back on once repopulated with new data.
-		The tweets would also perform the same as the rends where they would fade in once the user clicks the read tweets button.
-
-		If any of teh above had an error, an error message would appear - there is an error for each of the three components.
-
-		Below is a link to demo of the trends app, and also a link to download from git. If you have any comments, recomendations, advise, please let me know.
-
-		 -->
-
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript" src="js/custom.js"></script>
 	</body>
